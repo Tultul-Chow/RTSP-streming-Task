@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 export const validateInput = (str = "") => str.includes(".");
 
-class videoPlay extends React.Component  {
+class videoPlay extends React.Component {
 
   constructor(props) {
     super(props);
@@ -20,40 +20,39 @@ class videoPlay extends React.Component  {
     this.setState({ input: event.target.value })
   }
 
-  handleSubmit = (event) => {
+  submitForm = (event) => {
     event.preventDefault();
     this.setState({ url: this.state.input })
   }
   onNumber = (event) => {
-    this.setState({ number: parseInt(event.target.value )})
+    this.setState({ number: parseInt(event.target.value) })
   }
 
-  
+
   render() {
-   
+
     var a = [];
 
-    for (var i = 0; i < this.state.number; i++)
-     {
+    for (var i = 0; i < this.state.number; i++) {
       a.push(i)
       console.log(i)
-     }
+    }
     return (
-        <div className="App">
+      <div className="App">
         <header className="App-header">
           <div>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.submitForm}>
               <label style={{ color: "black", fontWeight: "normal" }} className="label ">Please Enter a web URL</label>
               <input onChange={this.onInput} className="form-control p-4" type="text" placeholder="Input the video url" name="url" />
               <br />
               <label style={{ color: "black", fontWeight: "normal" }} className="label ">Please Enter a number</label>
               <input className="form-control p-4" type="text" placeholder="Enter a number" name="number" onChange={this.onNumber} />
-              <span style={{ color: "red" }}></span>
+
               <button style={{ margin: "20px" }} className="btn btn-primary">Enter</button>
             </form>
 
           </div>
-          <div className="card-body">
+          <div className="videos gap">
             {
               a.map((item) => {
                 return <ReactPlayer url={this.state.url} controls={true} />
@@ -65,7 +64,7 @@ class videoPlay extends React.Component  {
         </header>
       </div>
     )
-}  
+  }
 
 }
 ;
