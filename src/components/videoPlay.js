@@ -4,7 +4,8 @@ import ReactPlayer from "react-player";
 export const validateInput = (str = "") => str.includes(".");
 
 class videoPlay extends React.Component  {
-constructor(props) {
+
+  constructor(props) {
     super(props);
 
     this.state = {
