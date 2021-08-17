@@ -44,7 +44,7 @@ class videoPlay extends React.Component  {
           <div>
             <form onSubmit={this.handleSubmit}>
               <label style={{ color: "black", fontWeight: "normal" }} className="label ">Please Enter a web URL</label>
-              <input onChange={this.onInput} className="form-control p-4" type="text" placeholder="Input the vidoe url" name="url" />
+              <input onChange={this.onInput} className="form-control p-4" type="text" placeholder="Input the video url" name="url" />
               <br />
               <label style={{ color: "black", fontWeight: "normal" }} className="label ">Please Enter a number</label>
               <input className="form-control p-4" type="text" placeholder="Enter a number" name="number" onChange={this.onNumber} />

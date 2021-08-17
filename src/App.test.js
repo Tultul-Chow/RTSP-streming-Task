@@ -11,5 +11,10 @@ describe("email",()=> {
     const custInput='abc'
     expect(validateInput(custInput)).not.toBe(true);
   });
+  test("Input field must be in the component",()=>{
+    const component= render (<VideoPlay/>);
+    const labelNode = component.getAllByLabelText("Please Enter a web URL");
+    expect (labelNode).toBeInTheDocument();
+  });
  
 });
