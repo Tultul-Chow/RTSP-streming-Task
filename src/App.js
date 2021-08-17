@@ -10,13 +10,11 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <VideoPlay />
         <Switch>
           <Route exact path="/"> <Home /> </Route>
         </Switch>
-
       </Router>
+   
     </div>
   )
 }
